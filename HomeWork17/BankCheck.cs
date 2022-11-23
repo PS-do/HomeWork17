@@ -17,34 +17,20 @@ namespace HomeWork17
         //Универсальный параметр T должен определять тип номера счета.
         //Разработать методы  для доступа  к данным  –  заполнения и чтения.
 
-        private T numChek;
-        private string name;
-        private decimal check;
-
-        //public void SetName(string value)
-        //{
-        //    name = value;
-        //}
-
-        //public void SetCheck(decimal value) { check = value; }
-        //public string Name
-        //{
-        //    get
-        //    { return name; }
-        //    set
-        //    { name = value; }
-        //}
+        private T NumChek { get; set; }    
+        private string Name { get; set; }
+        private decimal Check { get; set; }
 
         public void Input(T numChek, string name,decimal check)
         {
-            this.numChek = (T)Convert.ChangeType(numChek,typeof(T));
-            this.name = name;
-            this.check = check;
+            NumChek = (T)Convert.ChangeType(numChek,typeof(T));
+            this.Name = name;
+            this.Check = check;
         }
 
         public string Info()
         {
-            return $"{numChek} {name} {check}";
+            return $"{NumChek} {Name} {Check}";
         }
     }
 }
